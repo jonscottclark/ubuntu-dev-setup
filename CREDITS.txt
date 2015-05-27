@@ -1,0 +1,17 @@
+@rcelha for initial motivation
+  - https://github.com/rcelha/vagrant-sh-provisioner-scripts
+
+@sheikhwaqas for MySQL install script
+  - https://gist.github.com/sheikhwaqas/9088872
+
+@whitneyit for a very thorough vagrant config to reference
+  - https://github.com/whitneyit/vagrant
+
+@pdonald for his Vagrantfile and swapfile-creation script
+  - https://peteris.rocks/blog/vagrantfile-for-linux/
+
+@vitorbritto for sharing his dev environment and for great documentation
+  - https://github.com/vitorbritto/setup-vagrant
+
+@StanAngeloff for his extensively detailed Vagrant shell scripts
+  - https://github.com/StanAngeloff/vagrant-shell-scripts
