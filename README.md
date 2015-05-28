@@ -69,8 +69,8 @@ This repo borrowed heavily from some existing configurations and shell scripts d
 
 ### Licenses
 
-[MIT License](http://jonscottclark.mitlicense.org) © Jon Scott Clark
+[MIT License](http://jonscottclark.mit-license.org/) © Jon Scott Clark
 
-[MIT License](http://vitorbritto.mitlicense.org) © Vitor Britto
+[MIT License](http://vitorbritto.mit-license.org) © Vitor Britto
 
 [MIT License](https://github.com/StanAngeloff/vagrant-shell-scripts/blob/master/LICENSE.md) © Stan Angeloff
