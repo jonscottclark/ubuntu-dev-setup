@@ -12,7 +12,7 @@ An `init.sh` file is included to set up a brand new virtual private server (VPS)
 
 ### Motivation
 
-The need a local VM for development and a remote VPS for production, with the same configuration starting point, and not depending on provisioning or automation utilities like [Chef](https://chef.io) or [Puppet](http://puppetlabs.com).
+The need for a local VM for development and a remote VPS for production with the same configuration starting point; no dependency on provisioning or automation utilities like [Chef](https://chef.io) or [Puppet](http://puppetlabs.com).
 
 ### Prerequisites for a Vagrant VM (OSX only)
 
