@@ -25,6 +25,10 @@ Vagrant.configure("2") do |config|
   # Set up the environment
   config.vm.provision :shell, :path => "env-setup.sh"
 
+  # Add a swap file
+  config.vm.provision :shell, :inline => "fallocate -l 2G /swapfile && chmod 0600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' >> /etc/fstab"
+  config.vm.provision :shell, :inline => "echo vm.swappiness = 10 >> /etc/sysctl.conf && echo vm.vfs_cache_pressure = 50 >> /etc/sysctl.conf && sysctl -p"
+
   # Install git and some utilities
   config.vm.provision :shell do |s|
     s.path = "install-package.sh"
