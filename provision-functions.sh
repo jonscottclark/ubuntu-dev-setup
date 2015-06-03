@@ -8,7 +8,7 @@
 
 # Perform a non-interactive `apt-get` command.
 apt-non-interactive() {
-  $SUDO DEBIAN_FRONTEND=noninteractive apt-get -f -y -qq --no-install-recommends "$@"
+  $SUDO DEBIAN_FRONTEND=noninteractive apt-get -y -qq --no-install-recommends "$@"
 }
 
 ### PHP
