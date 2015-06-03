@@ -21,3 +21,7 @@ echo vm.swappiness = 10 >> /etc/sysctl.conf && echo vm.vfs_cache_pressure = 50 >
 # Update packages
 apt-non-interactive update
 apt-non-interactive upgrade
+
+# Add remote git hosts to known_hosts
+ssh-keyscan -H github.com > /dev/null 2>&1 >> ~/.ssh/known_hosts
+ssh-keyscan -H bitbucket.org > /dev/null 2>&1 >> ~/.ssh/known_hosts
