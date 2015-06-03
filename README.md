@@ -50,8 +50,9 @@ The need for a local VM for development and a remote VPS for production with the
 Some steps you might need to take after provisioning:
 
 - **Run `mysql_secure_installation` and change the root password for MySQL**
-- Install your personal [dotfiles](https://dotfiles.github.io)
+- [Generate an SSH key pair](https://help.github.com/articles/generating-ssh-keys/)
 - Change your default shell
+- Install your personal [dotfiles](https://dotfiles.github.io)
 - Install support for other languages (Go, Ruby, Python, etc.)
 - Install your favourite editor (vim, Emacs, etc.)
 - Set up Apache virtual hosts

@@ -7,6 +7,7 @@ server_maxcpu   = "50" # %
 Vagrant.configure("2") do |config|
   # Resolve "stdin: is not a tty" errors
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+  config.ssh.insert_key = false
 
   # Basic configuration
   config.vm.box = "#{server_box}"
