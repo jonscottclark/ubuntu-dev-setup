@@ -1,7 +1,7 @@
 server_box      = "ubuntu/trusty64"
 server_hostname = "local.dev"
 server_ip       = "192.168.32.101"
-server_memory   = "256" # Mb
+server_memory   = "512" # Mb
 server_maxcpu   = "50" # %
 
 Vagrant.configure("2") do |config|
