@@ -36,7 +36,7 @@ The need for a local VM for development and a remote VPS for production with the
 - [PHP](http://php.net)
   - w/ [Composer](https://getcomposer.org) installed globally
 - [MySQL](https://www.mysql.com)
-- [Node.js](https://nodejs.org) 0.10.x (via [nvm](https://github.com/creationix/nvm))
+- [Node.js](https://nodejs.org) 0.10.36 (via [nvm](https://github.com/creationix/nvm))
 - Other Packages:
   - [git](https://git-scm.com)
   - [git-flow](https://github.com/nvie/gitflow)
