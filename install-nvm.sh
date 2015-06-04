@@ -7,7 +7,7 @@ git clone https://github.com/creationix/nvm.git ~/.nvm > /dev/null 2>&1 && cd ~/
 . ~/.nvm/nvm.sh
 
 # Install a stable version of Node.js
-VERSION="0.10"
+VERSION="0.10.36"
 nvm install $VERSION > /dev/null 2>&1
 
 # Set that version to the 'default' alias
