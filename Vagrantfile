@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: "#{server_ip}"
 
   # Configure synced folder (host machine, guest VM)
-  config.vm.synced_folder "/var/www", "/var/www"
+  config.vm.synced_folder "/var/www", "/var/www", :mount_options => ["dmode=775", "fmode=664"], :owner => "vagrant", :group => "www-data"
   # Disable the default synced folder
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
