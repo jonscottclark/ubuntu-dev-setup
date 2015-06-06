@@ -1,0 +1,23 @@
+box:
+  name: ubuntu/trusty64
+  url: ubuntu/trusty64
+ip: 192.168.32.101
+hostname: test.dev
+specs:
+  memory: '512'
+  cpus: '1'
+  maxcpu: 50
+synced_folder:
+  0:
+    source: /var/www
+    target: /var/www
+    owner: vagrant
+    group: www-data
+ssh:
+  keep_alive: true
+packages:
+  - git-flow
+  - htop
+  - tree
+  - unzip
+  - wget
