@@ -99,7 +99,7 @@ if [ "$action" == 'create' ]; then
 
   # restart Apache
   echo "=> RESTARTING APACHE SERVICE..."
-  service apache2 reload
+  service apache2 reload > /dev/null 2>&1
 
   # show the finished message
   echo "=> OK: Virtual host created!"
@@ -123,7 +123,7 @@ if [ "$action" == 'delete' ]; then
 
     # restart Apache
     echo "=> RESTARTING APACHE SERVICE..."
-    service apache2 reload
+    service apache2 reload > /dev/null 2>&1
 
     # Delete virtual host config
     rm -f $conf
