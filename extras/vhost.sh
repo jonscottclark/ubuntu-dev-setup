@@ -3,7 +3,7 @@
 # Assign vars to arguments
 action=$1
 hostname=$2
-docRoot=$3
+docRoot=${3%/}
 
 # Set default parameters
 owner=$(whoami)
@@ -25,11 +25,13 @@ conf="/etc/apache2/sites-available/$hostname.conf"
 # If no document root provided, just use the hostname
 if [ "$docRoot" == "" ]; then
   docRoot=$userDir$hostname
-fi
+else
+  # If root dir starts with '/', don't use /var/www as default starting point
+  if [[ "$docRoot" =~ ^/ ]]; then
+    userDir=''
+  fi
 
-# If root dir starts with '/', don't use /var/www as default starting point
-if [[ "$docRoot" =~ ^/ ]]; then
-  userDir=''
+  docRoot=$userDir$docRoot
 fi
 
 # Ensure we're privileged
@@ -53,10 +55,10 @@ if [ "$action" == 'create' ]; then
     # write test file in the new hostname dir
     if ! echo "<?php echo phpinfo(); ?>" > $docRoot/phpinfo.php
     then
-      echo "=> ERROR: Not able to write phpinfo.php to $userDir/$docRoot/. Please check permissions!"
+      echo "=> ERROR: Not able to write phpinfo.php to $docRoot. Please check permissions!"
       exit;
     else
-      echo "=> OK: Created $docRoot/phpinfo.php to verify/test"
+      echo "=> OK: Created phpinfo.php to verify/test"
     fi
   fi
 
