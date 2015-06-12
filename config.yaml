@@ -2,7 +2,7 @@ box:
   name: ubuntu/trusty64
   url: ubuntu/trusty64
 ip: 192.168.32.101
-hostname: test.dev
+hostname: local.dev
 specs:
   memory: '512'
   cpus: '1'
